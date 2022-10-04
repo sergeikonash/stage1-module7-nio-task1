@@ -12,10 +12,8 @@ public class FileReader {
         String ageLine = "";
         String emailLine = "";
         String phoneLine = "";
-        try {
-            InputStream input = Files.newInputStream(Path.of(file.getPath()));
-
-            BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+        try (InputStream input = Files.newInputStream(Path.of(file.getPath()));
+             BufferedReader reader = new BufferedReader(new InputStreamReader(input));) {
 
             nameLine = reader.readLine();
             ageLine = reader.readLine();
