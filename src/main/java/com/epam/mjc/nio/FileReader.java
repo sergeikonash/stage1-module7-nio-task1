@@ -1,7 +1,8 @@
 package com.epam.mjc.nio;
 
-import java.io.File;
-
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class FileReader {
 
